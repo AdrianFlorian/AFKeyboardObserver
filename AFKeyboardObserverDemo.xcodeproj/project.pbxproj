@@ -18,6 +18,8 @@
 		F7E67F281763296400E5BF95 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E67F271763296400E5BF95 /* Default-568h@2x.png */; };
 		F7E67F2B1763296400E5BF95 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E67F291763296400E5BF95 /* MainStoryboard.storyboard */; };
 		F7E67F2E1763296400E5BF95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E67F2D1763296400E5BF95 /* ViewController.m */; };
+		F7E67F3617632B7600E5BF95 /* AFKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E67F3517632B7600E5BF95 /* AFKeyboardObserver.m */; };
+		F7E67F3C17632CF900E5BF95 /* AFKeyboardObserverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E67F3B17632CF900E5BF95 /* AFKeyboardObserverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		F7E67F2A1763296400E5BF95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F7E67F2C1763296400E5BF95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F7E67F2D1763296400E5BF95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7E67F3417632B7600E5BF95 /* AFKeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyboardObserver.h; sourceTree = "<group>"; };
+		F7E67F3517632B7600E5BF95 /* AFKeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyboardObserver.m; sourceTree = "<group>"; };
+		F7E67F3A17632CF900E5BF95 /* AFKeyboardObserverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyboardObserverViewController.h; sourceTree = "<group>"; };
+		F7E67F3B17632CF900E5BF95 /* AFKeyboardObserverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyboardObserverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +89,11 @@
 		F7E67F171763296400E5BF95 /* AFKeyboardObserverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7E67F3E17632D1800E5BF95 /* Controllers */,
+				F7E67F3D17632CFC00E5BF95 /* AFKeyboardObserver */,
 				F7E67F201763296400E5BF95 /* AppDelegate.h */,
 				F7E67F211763296400E5BF95 /* AppDelegate.m */,
 				F7E67F291763296400E5BF95 /* MainStoryboard.storyboard */,
-				F7E67F2C1763296400E5BF95 /* ViewController.h */,
-				F7E67F2D1763296400E5BF95 /* ViewController.m */,
 				F7E67F181763296400E5BF95 /* Supporting Files */,
 			);
 			path = AFKeyboardObserverDemo;
@@ -105,6 +111,26 @@
 				F7E67F271763296400E5BF95 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7E67F3D17632CFC00E5BF95 /* AFKeyboardObserver */ = {
+			isa = PBXGroup;
+			children = (
+				F7E67F3A17632CF900E5BF95 /* AFKeyboardObserverViewController.h */,
+				F7E67F3B17632CF900E5BF95 /* AFKeyboardObserverViewController.m */,
+				F7E67F3417632B7600E5BF95 /* AFKeyboardObserver.h */,
+				F7E67F3517632B7600E5BF95 /* AFKeyboardObserver.m */,
+			);
+			name = AFKeyboardObserver;
+			sourceTree = "<group>";
+		};
+		F7E67F3E17632D1800E5BF95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7E67F2C1763296400E5BF95 /* ViewController.h */,
+				F7E67F2D1763296400E5BF95 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +202,8 @@
 				F7E67F1E1763296400E5BF95 /* main.m in Sources */,
 				F7E67F221763296400E5BF95 /* AppDelegate.m in Sources */,
 				F7E67F2E1763296400E5BF95 /* ViewController.m in Sources */,
+				F7E67F3617632B7600E5BF95 /* AFKeyboardObserver.m in Sources */,
+				F7E67F3C17632CF900E5BF95 /* AFKeyboardObserverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

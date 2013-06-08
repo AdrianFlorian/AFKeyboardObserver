@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIB-lZ-M2X">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swC-S5-vE2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="313" id="VIa-i7-heS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="swC-S5-vE2" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="9Yv-sh-ZZh"/>
+                            <constraint firstItem="IIB-lZ-M2X" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="9qe-rS-ihd"/>
+                            <constraint firstItem="swC-S5-vE2" firstAttribute="centerX" secondItem="IIB-lZ-M2X" secondAttribute="centerX" type="default" id="EIc-JX-4zi"/>
+                            <constraint firstAttribute="bottom" secondItem="swC-S5-vE2" secondAttribute="bottom" constant="9" id="OJ1-m0-Ogs"/>
+                            <constraint firstItem="IIB-lZ-M2X" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="hbb-rb-iWv"/>
+                            <constraint firstItem="swC-S5-vE2" firstAttribute="top" secondItem="IIB-lZ-M2X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mua-Qm-XK0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainView" destination="IIB-lZ-M2X" id="jqq-l1-7NZ"/>
+                        <outlet property="textField" destination="swC-S5-vE2" id="ny9-do-Qgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="AFKeyboardObserverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AFKeyboardObserverViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="AFKeyboardObserverViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

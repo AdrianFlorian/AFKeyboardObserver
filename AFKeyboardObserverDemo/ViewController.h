@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFKeyboardObserverViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : AFKeyboardObserverViewController
+
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end

@@ -8,22 +8,27 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+//
+-(NSArray *)viewsToAdjustHeight {
+    return @[self.mainView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSArray *)viewsToAdjustYPosition {
+    return @[self.textField];
+}
+
+-(void)keyboardWillAppear {
+    // do additional setup
+}
+
+-(void)keyboardWillDissapear {
+    // do additional setup
+}
+
+-(void)keyboarDidReturn {
+    // do additional setup
 }
 
 @end

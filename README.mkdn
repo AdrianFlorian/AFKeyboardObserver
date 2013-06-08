@@ -1,0 +1,43 @@
+## AFKeyboardObserver
+
+You know when you have to adjust your views whenever the UIKeyboard appears and have to write a lof of code which will only make your controllers more ugly?
+
+Well, I've decided to build a very simple library to fix that for you.
+
+
+## Feature list
+
+- adjust view's Y coordinage as the keyboard appears/disappears
+- adjust the view's height as the keyboard appears/dissapears
+    
+##Install
+
+Import AFKeyboardObserver and AFKeyboardObserverViewController to your project :
+    
+    //subclass AFKeyboardObserverViewController
+    @interface ViewController : AFKeyboardObserverViewController
+
+    //implement the delegate methods - they're all optional
+
+    //adjusts the height of the views when the keyboard appears
+    -(NSArray *)viewsToAdjustHeight {
+        return @[self.mainView];
+    }
+
+    //adjusts the Y position of the views when the keyboard appears
+    -(NSArray *)viewsToAdjustYPosition {
+        return @[self.textField];
+    }
+
+    -(void)keyboardWillAppear {
+        // do additional setup
+    }
+
+    -(void)keyboardWillDissapear {
+        // do additional setup
+    }
+
+    -(void)keyboarDidReturn {
+        // do additional setup
+    }
+    
