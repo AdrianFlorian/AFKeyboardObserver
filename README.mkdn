@@ -9,7 +9,7 @@ Well, I've decided to build a very simple library to fix that for you.
 
 - adjust view's Y coordinage as the keyboard appears/disappears
 - adjust the view's height as the keyboard appears/dissapears
-- do custom setup whenever the keyboard appears, disappears, returns
+- do custom setup whenever the keyboard appears, disappears
     
 ##Install
 
@@ -36,9 +36,4 @@ Import AFKeyboardObserver and AFKeyboardObserverViewController to your project :
 
     -(void)keyboardWillDissapear {
         // do additional setup
-    }
-
-    -(void)keyboarDidReturn {
-        // do additional setup
-    }
-    
+    }    

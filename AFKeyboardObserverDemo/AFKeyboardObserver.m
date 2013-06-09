@@ -1,6 +1,5 @@
 //
 //  AFKeyboardViewsAdjuster.m
-//  SocialRehub
 //
 //  Created by Adrian Florian on 6/5/13.
 //  Copyright (c) 2013 Adrian Florian. All rights reserved.
@@ -67,15 +66,6 @@ static AFKeyboardObserver *_sharedInstance;
         if ([observer respondsToSelector:@selector(keyboardWillDissapear)])
             [observer keyboardWillDissapear];
     }
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    for (id<AFKeyboardObserverDelegate> observer in [self registeredObservers]) {
-        if ([observer respondsToSelector:@selector(keyboarDidReturn)])
-            [observer keyboarDidReturn];
-    }
-    
-    return YES;
 }
 
 - (CGSize)keyboardSizeForNotification:(NSNotification *)notification {
